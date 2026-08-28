@@ -1,0 +1,6 @@
+streamlit
+openai
+PyPDF2
+edge-tts
+pydantic
+python-dotenv

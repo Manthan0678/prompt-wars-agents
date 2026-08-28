@@ -1,0 +1,28 @@
+# Multi-Agent Hiring Committee (Prompt Wars Submission)
+
+## Overview
+This project is an autonomous, multi-agent AI system designed to evaluate candidate resumes and interview transcripts. Rather than relying on a single AI prompt or basic mathematical averaging, this system deploys four distinct AI personas that independently evaluate the candidate, debate each other using factual evidence, and reach a final synthesized verdict.
+
+## Key Features
+1. **Candidate Profile Builder:** Extracts a unified, objective fact-base (skills, timelines, verbatim claims) from uploaded PDFs before any agent forms an opinion.
+2. **Four Isolated Personas:**
+   * **Technical Agent:** Evaluates technical depth and system architecture logic.
+   * **HR / Culture Agent:** Assesses communication clarity, honesty, and cultural fit.
+   * **Hiring Manager:** Analyzes business impact, execution capability, and ROI.
+   * **Skeptic Agent:** Aggressively audits for inflated claims, contradictions, and red flags.
+3. **Evidence-Based Debate Engine:** Agents challenge and corroborate each other's initial stances using exact verbatim quotes from the candidate's transcript. 
+4. **Arbiter Final Decision:** A final reasoning step that weighs debate shifts, technical proofs, and unresolved red flags to deliver a deterministic verdict (no simple averaging).
+5. **Sequential Audio Synthesis (Bonus):** Uses Edge TTS to map unique voices to each persona, generating a seamless master audio track of the live debate.
+
+## How to Run Locally
+1. Install dependencies:
+   `pip install -r requirements.txt`
+2. Launch the Streamlit web interface:
+   `streamlit run app.py`
+
+## Usage Instructions
+1. Open the local web URL provided in the terminal.
+2. Open the left sidebar and enter your Groq API Key. 
+3. Select your preferred LLM model from the dropdown.
+4. Upload a Candidate Resume PDF and a Candidate Transcript PDF.
+5. Click **Start Committee Evaluation** and listen to the final debate!
